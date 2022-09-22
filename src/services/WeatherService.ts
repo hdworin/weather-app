@@ -18,6 +18,15 @@ export async function searchLocation(term: string): Promise<WeatherLocation | un
   return await result.json();
 }
 
+export async function searchZipcode(term: string): Promise<WeatherLocation | undefined> {
+  const result = await fetch(`${server}/weather?zip=${term}&${keyQuery}`);
+
+  if (result.status === 404) return undefined;
+  if (result.status !== 200) throw new Error('Failed to read location data');
+
+  return await result.json();
+}
+
 export async function searchCoordinates(latitude: string, longitude: string, ): Promise<WeatherLocation | undefined> {
   const result = await fetch(`${server}/weather?lat=${latitude}&lon=${longitude}&${keyQuery}`);
 

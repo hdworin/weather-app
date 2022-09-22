@@ -18,7 +18,7 @@ export const LocationSearch: FC<LocationSearchProps> = ({onSearch}) => {
   return (
     <div>
       <label>
-        Add Location
+        Add Location or Zipcode
         <input className="ml-1 mr-1" type="text" value={locationSearch}
                onChange={e => setLocationSearch(e.target.value)}/>
       </label>

@@ -1,3 +1,10 @@
+# Make sure to export the WeatherAPI Key
+The openweathermap api key needs to be exported to the environment for the app to work. On Linux and Mac use the following:
+
+export REACT_APP_OPEN_WEATHER_API_KEY=yourkeyhere
+
+On windows set in the Advanced System settings.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
